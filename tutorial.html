@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="nl">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="tutorial.css">
+		<title>Tutorial Pixel-art code</title>
+	</head>
+	<body>
+	  <nav>
+    <ul class="navbar">
+      <li><a href="/tutorial.html" class="active">Tutorial</a></li>
+      <li><a href="/example/index.html">Example</a></li>
+    </ul>
+  </nav>
+		<main class="container">
+			<h1>Tutorial Pixel-art Code</h1>
+			<p>Welkom bij deze vrolijke reis door de wondere wereld van pixel-art met HTML, CSS en JavaScript! Stap voor stap bouwen we samen een simpel maar krachtig tekenprogramma. Klaar? Let’s go!</p>
+
+			<!-- Leuk weetje over commentaar -->
+			<aside class="comment-box">
+				<div class="icon">💡</div>
+				<div class="content">
+					<h3>Leuk weetje:</h3>
+					<p>Wist je dat je in code ook kunt “fluisteren” naar jezelf of collega’s? Deze stukjes tekst verschijnen <em>niet</em> op de pagina, maar helpen je de logica te onthouden.</p>
+					<ul>
+						<li>
+							<code>&lt;!-- Dit is commentaar in HTML --&gt;</code>
+						</li>
+						<li>
+							<code>/* Dit is commentaar in CSS */</code>
+						</li>
+						<li>
+							<code>// Dit is commentaar in JavaScript</code>
+						</li>
+					</ul>
+				</div>
+			</aside>
+
+			<ol class="steps">
+				<li id="stap-1">
+					<h2>Visual Studio Code downloaden</h2>
+					<p>Het wordt jouw eerste keer coderen. Daarvoor heb je een editor nodig. Ik raad Visual Studio Code aan, deze gebruik ik ook in mijn dagdagelijks werk als ik programmeer.</p>
+					<p>Download Visual Studio Code via de onderstaande link:</p>
+					<a href="https://code.visualstudio.com/" target="_blank" class="btn-download">Download Visual Studio Code</a>
+				</li>
+				<li id="stap-2">
+					<h2>Startmap ophalen</h2>
+					<p>Allereerst download je de lege startmap. Dit is de basis waarop we straks gaan tekenen. Klaar? Top!</p>
+
+					<a href="/bronmap.zip" download="bronmap.zip" class="btn-download">Download broncode</a>
+					<p>Je mag de map uitpakken waar je hem wilt. Nadat je hem uitgepakt hebt, mag je het map bronmap verslepen naar Visual Studio Code die je net gedownload hebt.</p>
+				</li>
+
+				<li id="stap-3">
+					<h2>Eerste lijntjes toevoegen in HTML</h2>
+					<p>Elke website heeft altijd een startstructuur, hieronder vind je de startstructuur om te starten.</p>
+					<div class="fiddle-container">
+						<script async src="//jsfiddle.net/RobinJorissenAHS/e0qn179k/8/embed/html/dark/"></script>
+					</div>
+				</li>
+
+				<li id="stap-4">
+					<h2>Basis-CSS toevoegen</h2>
+					<p>Geef je project wat flair met onze CSS-snippet. Plak ‘m in <code>main.css</code> en zie hoe de styling tot leven komt!</p>
+					<div class="fiddle-container">
+						<script async src="//jsfiddle.net/RobinJorissenAHS/nad2vL06/1/embed/css/dark/"></script>
+					</div>
+				</li>
+
+				<li id="stap-5">
+					<h2>Bedieningselementen opbouwen</h2>
+					<p>Nu gaan we de knoppenstructuur in HTML neerzetten. Kopieer de snippet onder de “bedieningsvenster”-commentaar en ontdek hoe eenvoudig je knoppen kunt definiëren.</p>
+					<div class="fiddle-container">
+						<script async src="//jsfiddle.net/RobinJorissenAHS/z9so0j1t/7/embed/html/dark/"></script>
+					</div>
+				</li>
+
+				<li id="stap-6">
+					<h2>Kleurkiezer, gum, clear, grid en download-knop</h2>
+					<p>Voeg leven (en correcties!) toe aan je canvas door achtereenvolgens:<br><br>
+							- De kleurkiezer te koppelen,<br>
+							- De gum-knop aan/uit te zetten,<br>
+							- De clear-knop alle pixels te resetten,<br>
+							- De grid-grootte variabel te maken,<br>
+							- En tenslotte een download-knop toe te voegen.<br></p>
+					<p> Kopieer per onderdeel de bijbehorende snippet en plak ‘m direct onder de juiste variabele in je <code>main.js</code>. Test na elke stap even in je browser om te controleren dat alles werkt.</p>
+					<div class="fiddle-container">
+						<script async src="//jsfiddle.net/RobinJorissenAHS/tf9jqzm1/1/embed/html/dark/"></script>
+					</div>
+					<div class="fiddle-container">
+						<script async src="//jsfiddle.net/RobinJorissenAHS/eyh2o3t8/1/embed/html/dark/"></script>
+					</div>
+					<div class="fiddle-container">
+						<script async src="//jsfiddle.net/RobinJorissenAHS/8956wa7b/embed/html/dark/"></script>
+					</div>
+					<div class="fiddle-container">
+						<script async src="//jsfiddle.net/RobinJorissenAHS/wma7tjh5/embed/html/dark/"></script>
+					</div>
+					<div class="fiddle-container">
+						<script async src="//jsfiddle.net/RobinJorissenAHS/uek0qyma/embed/html/dark/"></script>
+					</div>
+				</li>
+
+				<li id="stap-7">
+					<h2>Achtergrond</h2>
+					<p>Een schone lei! Voeg een achtergrond-div toe onder je controls, zodat je pixel-art straks echt opvalt.</p>
+					<div class="fiddle-container">
+						<script async src="//jsfiddle.net/RobinJorissenAHS/axnop4y6/2/embed/html/dark/"></script>
+					</div>
+				</li>
+
+				<li id="stap-8">
+					<h2>JavaScript functies</h2>
+					<p>We schrijven de lijst met functies die straks al je knoppen en acties gaan aansturen. Plak de volgende code in <code>main.js</code> en zie hoe de magie begint.</p>
+					<div class="fiddle-container">
+						<script async src="//jsfiddle.net/RobinJorissenAHS/12pzfm47/embed/js/dark/"></script>
+					</div>
+				</li>
+
+				<li id="stap-9">
+					<h2>Grid genereren</h2>
+					<p>Tijd voor het raster! Met deze snippet maak je een klikbaar canvas vol blokjes waar je straks je pixel-art op kunt tekenen.</p>
+					<div class="fiddle-container">
+						<script async src="//jsfiddle.net/RobinJorissenAHS/4d7s2mgv/1/embed/js/dark/"></script>
+					</div>
+				</li>
+
+				<li id="stap-10">
+					<h2>Evenementen luisteren</h2>
+					<p>Laat je knoppen reageren op elke klik. Kopieer de event-listener code en test zelf: klik, kleur, gum… alles werkt!</p>
+					<div class="fiddle-container">
+						<script async src="//jsfiddle.net/RobinJorissenAHS/Le3hzwum/embed/js/dark/"></script>
+					</div>
+				</li>
+
+				<li id="stap-11">
+					<h2>Download met tijdstempel</h2>
+					<p>Geef je kunstwerk een unieke naam met een tijdstempel. Zo raak je nooit bestanden kwijt, zelfs niet als je honderd koeien tekent!</p>
+					<div class="fiddle-container">
+						<script async src="//jsfiddle.net/RobinJorissenAHS/qf7drhoz/embed/js/dark/"></script>
+					</div>
+				</li>
+			</ol>
+		</main>
+
+		<footer class="container">
+			<p>© 2025 Robin Jorissen - Artevelde Hogeschool</p>
+		</footer>
+
+		<script src="tutorial.js"></script>
+	</body>
+</html>

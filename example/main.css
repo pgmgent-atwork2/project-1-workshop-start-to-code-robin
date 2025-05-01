@@ -1,0 +1,133 @@
+/* main.css - styling Pixel Art Creator */
+:root {
+  --main-color: #f4c530;
+  --text-color: #494960;
+  --secondary-color: #f0f0f0;
+  --active: #836c21;
+  --blue: #3b82f6;
+  --blue-hover: #2563eb;
+  --raster: #bebebe;
+}
+
+/* Body styling */
+body {
+  font-family: "Segoe UI", Tahoma;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px;
+  background: var(--main-color);
+  color: var(--text-color);
+}
+
+/* Page title */
+h1 {
+  margin-bottom: 20px;
+  font-size: 2rem;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+/* Controls container */
+#controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  background: var(--secondary-color);
+  padding: 16px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Labels and inputs */
+#controls label {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.9rem;
+}
+
+#controls input[type="color"],
+#controls input[type="text"],
+#controls select {
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 0.9rem;
+}
+
+/* Buttons styling */
+#controls button {
+  padding: 6px 12px;
+  background: var(--blue);
+  color: var(--secondary-color);
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background 0.2s, transform 0.1s;
+}
+
+#controls button:hover {
+  background: var(--blue-hover);
+}
+
+#controls button:active {
+  transform: scale(0.98);
+}
+
+/* Eraser active state */
+#eraserBtn.active {
+  background: var(--active);
+}
+
+/* Canvas styling */
+.background {
+  margin: auto;
+  position: relative;
+  margin-top: 5rem;
+}
+
+.background .pixelart {
+  width: 100%;
+  height: auto;
+  max-width: 15rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  position: absolute;
+  border: 5px solid var(--text-color);
+}
+
+.cow {
+  right: 110%;
+  top: 2rem;
+  transform: rotate(-15deg);
+}
+.giraf {
+  right: -20rem;
+  top: -1rem;
+  transform: rotate(-10deg);
+}
+.heart {
+  right: -18rem;
+  top: 14rem;
+  transform: rotate(10deg);
+}
+
+#canvas {
+  display: grid;
+  background: var(--text-color);
+  margin-top: 16px;
+  padding: 4px;
+  border-radius: 8px;
+  box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Pixel cells */
+.pixel {
+  width: 20px;
+  height: 20px;
+  background: var(--secondary-color);
+  border: 1px solid var(--raster);
+  box-sizing: border-box;
+  cursor: pointer;
+  transition: background 0.1s;
+}

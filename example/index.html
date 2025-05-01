@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="nl">
+	<head>
+		<meta charset="UTF-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1"/>
+		<title>Pixel Art Creator</title>
+		<link rel="stylesheet" href="main.css"/>
+		<link rel="stylesheet" href="/tutorial.css"/>
+
+	</head>
+	<body>
+		<nav class="index">
+			<ul class="navbar">
+				<li>
+					<a href="/tutorial.html">Tutorial</a>
+				</li>
+				<li>
+					<a href="/example/index.html" class="active">Example</a>
+				</li>
+			</ul>
+		</nav>
+		<h1>Pixel Art Creator</h1>
+		<!-- Hier komt later de bedieningvenster -->
+		<div id="controls">
+			<!-- Hier komt later de kleurkiezer -->
+			<label>
+        Kleur:
+        <input type="color" id="colorPicker" value="#000000"/>
+			</label>
+
+			<!-- Hier komt later de Gum-modus -->
+			<button id="eraserBtn">Gum</button>
+
+			<!-- Hier komt later de Clear-knop -->
+			<button id="clearBtn">Alles leegmaken</button>
+
+			<!-- Hier komt later de variabele grid-grootte -->
+			<label for="gridSize">
+        Raster-grootte:
+        <input type="range" id="gridSize" min="16" max="32" value="16"/>
+			</label>
+
+			<!-- Hier komt later de download-knop -->
+			<label>
+        Titel:
+        <input type="text" id="titleInput" placeholder="Mijn Pixel Art"/>
+			</label>
+			<button id="downloadBtn">Download PNG</button>
+		</div>
+
+		<div class="background">
+			<div id="canvas"></div>
+			<img class="pixelart cow" src="cow.png" alt="pixel-art van een koe">
+			<img class="pixelart giraf" src="giraf.png" alt="pixel-art van een giraf">
+			<img class="pixelart heart" src="heart.png" alt="pixel-art van een hart">
+		</div>
+
+		<script src="main.js"></script>
+	</body>
+</html>

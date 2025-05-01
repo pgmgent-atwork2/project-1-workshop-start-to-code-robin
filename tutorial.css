@@ -1,0 +1,273 @@
+:root {
+  --main-color: #f4c530;
+  --secondary-color: #f0f0f0;
+  --tertiary-color: #494960;
+  --active: #836c21;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, sans-serif;
+  background: var(--main-color);
+  color: var(--tertiary-color);
+  margin: 0;
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto 2rem;
+  background: var(--secondary-color);
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.toc {
+  background: var(--tertiary-color);
+  color: var(--secondary-color);
+  padding: 1rem;
+  border-radius: 6px;
+  margin-bottom: 2rem;
+}
+
+.toc h2 {
+  margin-top: 0;
+}
+
+.toc ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.toc li + li {
+  margin-top: 0.5rem;
+}
+
+.toc a {
+  color: var(--secondary-color);
+  text-decoration: none;
+}
+
+.toc a:hover {
+  text-decoration: underline;
+}
+
+.steps {
+  list-style: none;
+  counter-reset: step;
+  margin: 0;
+  padding: 0;
+}
+
+.steps li {
+  counter-increment: step;
+  margin-bottom: 2rem;
+  padding-left: 2rem;
+  position: relative;
+}
+
+.steps li::before {
+  content: counter(step);
+  position: absolute;
+  left: 0;
+  top: 0.2rem;
+  width: 1.5rem;
+  height: 1.5rem;
+  background: var(--active);
+  color: var(--secondary-color);
+  border-radius: 50%;
+  text-align: center;
+  line-height: 1.5rem;
+  font-weight: bold;
+}
+
+.steps h2 {
+  margin-bottom: 0.5rem;
+}
+
+.embed {
+  position: relative;
+  margin: 1rem 0;
+  background: var(--tertiary-color);
+  border-radius: 6px;
+  overflow: hidden;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.embed .copy-btn {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  background: var(--active);
+  border: none;
+  color: var(--secondary-color);
+  padding: 0.3rem 0.6rem;
+  border-radius: 4px;
+  font-size: 0.85rem;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.embed iframe {
+  width: 100%;
+  border: none;
+  display: block;
+  min-height: 200px;
+}
+
+.back-to-top {
+  text-align: right;
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
+}
+
+.back-to-top a {
+  color: var(--tertiary-color);
+  text-decoration: none;
+}
+
+.back-to-top a:hover {
+  text-decoration: underline;
+}
+
+p {
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+/* Optioneel: media query voor mobiel */
+@media (max-width: 600px) {
+  .container {
+    padding: 1rem;
+  }
+  h1 {
+    font-size: 2rem;
+  }
+}
+
+
+.comment-box {
+  display: flex;
+  gap: 1rem;
+  background: var(--secondary-color);
+  border-left: 5px solid var(--active);
+  padding: 1rem 1.5rem;
+  margin: 2rem 0;
+  border-radius: 6px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+.comment-box .icon {
+  font-size: 2rem;
+  line-height: 1;
+  margin-top: 0.25rem;
+}
+
+.comment-box .content h3 {
+  margin: 0 0 0.5rem;
+  color: var(--active);
+  font-size: 1.2rem;
+}
+
+.comment-box .content p {
+  margin: 0 0 0.5rem;
+  line-height: 1.4;
+}
+
+.comment-box .content ul {
+  margin: 0;
+  padding-left: 1.2rem;
+}
+
+.comment-box .content ul li {
+  margin-bottom: 0.3rem;
+}
+
+.btn-download {
+  display: inline-block;
+  padding: 0.6em 1.2em;
+  background-color: var(--active);
+  color: #fff;
+  text-decoration: none;
+  border-radius: 0.3em;
+  font-family: sans-serif;
+  transition: background-color 0.2s ease;
+}
+
+.btn-download:hover {
+  background-color: var(--main-color);
+}
+
+/* ========== Mooie Navbar ========== */
+nav {
+  width: 100%;
+  background: var(--tertiary-color);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+
+/* Binnen de container breedte centreren */
+nav .navbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  max-width: 900px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0.75rem 1rem;
+}
+
+/* Links */
+.navbar a {
+  
+  position: relative;
+  color: var(--secondary-color);
+  text-decoration: none;
+  padding: 0.4rem 0;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+/* Onderstreping vanaf links */
+.navbar a::after {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: var(--main-color);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+
+/* Hover- en active-state */
+.navbar a:hover,
+.navbar a.active {
+  color: var(--main-color);
+}
+.navbar a:hover::after,
+.navbar a.active::after {
+  transform: scaleX(1);
+}
+
+/* Mobiel: iets minder gap */
+@media (max-width: 600px) {
+  nav .navbar {
+    gap: 1rem;
+    padding: 0.5rem;
+  }
+}
+
